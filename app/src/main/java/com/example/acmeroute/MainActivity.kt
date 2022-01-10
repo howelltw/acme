@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import com.example.acmeroute.databinding.MainActivityBinding
 import com.example.acmeroute.ui.main.RouteFragment
 import com.example.acmeroute.ui.main.RouteViewModel
+import kotlinx.serialization.ExperimentalSerializationApi
 
+@ExperimentalSerializationApi
 class MainActivity : AppCompatActivity() {
 
   private lateinit var binding: MainActivityBinding
