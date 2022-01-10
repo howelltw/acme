@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/item_frame"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginHorizontal="@dimen/grid_0_5"
+  android:layout_marginVertical="@dimen/grid_0_25"
+  android:background="?attr/colorSecondary">
+
+  <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/plane_00"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/grid_2"
+      android:paddingBottom="@dimen/grid_2">
+
+      <TextView
+        android:id="@+id/driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:layout_marginStart="@dimen/grid_2"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Everardo Welch" />
+
+      <TextView
+        android:id="@+id/destination_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:layout_marginStart="@dimen/grid_2"
+        android:layout_marginTop="@dimen/grid_1"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:text="@string/destination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver_name"
+        app:layout_goneMarginEnd="@dimen/grid_2" />
+
+      <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/name_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="driver_name, destination_label"        />
+
+      <TextView
+        android:id="@+id/destination_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:layout_marginStart="@dimen/grid_2"
+        android:maxLines="2"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination_label"
+        tools:text="63187 Volkman Garden Suite 447" />
+
+      <TextView
+        android:id="@+id/ss_score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:layout_marginStart="@dimen/grid_2"
+        android:layout_marginTop="@dimen/grid_1"
+        android:textAlignment="textEnd"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name_barrier"
+        app:layout_constraintTop_toTopOf="@id/driver_name"
+        app:layout_constraintBottom_toBottomOf="@+id/destination_label"
+        tools:text="15.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

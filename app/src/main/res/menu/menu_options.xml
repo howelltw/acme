@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="com.example.test.ScrollingActivity">
+  <item
+    android:id="@+id/action_by_delta"
+    android:orderInCategory="100"
+    android:title="@string/action_by_delta_title"
+    app:showAsAction="never" />
+  <item
+    android:id="@+id/action_by_least_common_factors"
+    android:orderInCategory="200"
+    android:title="@string/action_by_least_common_factors_title"
+    app:showAsAction="never" />
+</menu>

@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">Acme Route</string>
+  <string name="action_by_delta_title">Optimize by Even/Odd Delta</string>
+  <string name="action_by_least_common_factors_title">Optimize by Least Common Factors</string>
+  <string name="destination">Shipment Destination:</string>
+</resources>
